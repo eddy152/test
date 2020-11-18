@@ -14,7 +14,7 @@ public class ConditionExample {
 		if (score >= 90) {
 			if (score >= 95) {
 				grade = "A+";
-			} else if{
+			} else{
 				grade = "A";
 			} if (score >= 80) {
 				grade = "B"; 

@@ -2,16 +2,29 @@ package variable;
 
 public class ArrayExample1 {
 	public static void main(String[] args) {
-		int[] numbers = {0, 10, 20, 30, 40, 50, 60, 70, 80, 90};
+		int[] intAry;
 		int sum = 0;
-		
-		for(int i = 1; i <= 10; i ++) {
-			if(i % 2 != 0) {
-				sum += numbers[i-1];
-				System.out.print(numbers[i-1] + "  ");
-				System.out.println(sum);
-			}
-		}
+		intAry = new int[] { 34, 66, 82 };
 
+		for (int i = 0; i < intAry.length; i++) {
+			sum += intAry[i];
+		}
+		System.out.println(sum);
+		sum = 0;
+		sum = sumAry(intAry);
+		System.out.println(sum);
+		
+		int[] intAry2 = {11,22,33,44,55,66,77};
+		sum = 0;
+		sum = sumAry(intAry2);
+		System.out.println(sum);
+	}
+
+	public static int sumAry(int[] ary) {
+		int sum = 0;
+		for (int num : ary) {
+			sum += num;
+		}
+		return sum;
 	}
 }

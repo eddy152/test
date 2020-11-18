@@ -2,19 +2,28 @@ package variable;
 
 public class ArrayExample {
 	public static void main(String[] args) {
-		int num[] = { 1, 2, 3, 4, 5 };
-		int[] numbers = { 10, 20, 30, 40, 50 };
-		numbers[2] = 200;
-		int sum = 0;
-		String name[] = { "Hello ", "World ", "Nice ", "To ", "Meet ", "You" };
-		String nam = "";
-		name[2] = "Good ";
-
-		for (int i = 0; i < 6; i++) {
-			System.out.println(name[i]);
-			nam += name[i];
-			System.out.println(nam);
+		int[] intAry = new int[5];
+		intAry[0] = 15;
+		intAry[4] = 33;
+		for (int i = 0; i < 5; i++) {
+			System.out.println(intAry[i]);
 		}
 
+		double[] doubleAry;
+		doubleAry = new double[] { 2.3, 2, 4.5, 2.2, 1.4 };
+		System.out.println(doubleAry[0]);
+		double sum = 0;
+		for (int i = 0; i < doubleAry.length; i++) {
+			sum += doubleAry[i];
+		}
+		System.out.println("sum : " + sum);
+		
+		// enhanced for
+		for(double db1 : doubleAry) { //doubleAry의 길이만큼 순차적으로 db1에 대입 배열에서 사용. 
+			sum += db1;
+			System.out.println(db1);
+		}
+		System.out.println("sum : " + sum);
 	}
 }
+
