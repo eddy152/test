@@ -12,7 +12,8 @@ public class HW {
 				sum += intAry2[i][q];
 			}
 			System.out.println("intAry[" + i + "] 합 : " + sum);
-			System.out.println("intAry["+ i + "]평균 :" + sum/intAry2[i].length);
+			System.out.println("intAry["+ i + "] 평균 :" + sum/intAry2[i].length);
+			sum = 0;
 		}
 	}
 }
